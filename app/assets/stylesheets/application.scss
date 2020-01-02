@@ -1,0 +1,101 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_self
+ */
+
+ @import "variables";
+ @import "bootstrap";
+
+
+ .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: white;
+  transition: all 0.5s;
+
+  &--stick {
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+
+    &.header--reversal {
+      background: #fff;
+    }
+  }
+  &--reversal {
+    background: transparent;
+  }
+}
+
+ .navbar {
+  .collapse {
+    a {
+      color: var(--gray) !important;
+      &:hover {
+        color: var(--green) !important;
+      }
+    }
+  }
+}
+
+.hero {
+  position: relative;
+  padding: 240px 0;
+  background: url(hero1-background.jpg) no-repeat center center;
+  background-size: cover;
+
+  &--mask::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 80%;
+    height: 100%;
+    opacity: 0.85;
+    background-color: var(--white);
+    clip-path: polygon(0 0, 90% 0, 70% 100%, 0 100%);
+  }
+  &__bg2 {
+    background-image: url(hero2-background.jpg);
+  }
+
+  &__heading {
+    z-index: 1;
+
+    h1 {
+      color: color('main-gray');
+    }
+    p {
+      line-height: 2;
+    }
+    .btn {
+      padding: 0.5em 2em;
+    }
+  }
+}
+
+.split {
+  position: absolute;
+  pointer-events: none;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  svg {
+    transform: scale(2);
+    transform-origin: top center;
+    width: 100%;
+    height: auto;
+  }
+}
