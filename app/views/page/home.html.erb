@@ -4,15 +4,153 @@
     <div class="row">
       <div class="hero__heading col-lg-6 col-md-7">
         <h1>创造&实现商业计划</h1>
-        <p className="text-secondary mt-4">CREATETHINK为您提供定制的设计、开发服务, 同时注重制作移动优先的WEB、H5和小程序。根据您的需要量身定义最合适的系统。</p>
+        <p class="text-secondary mt-4">CREATETHINK为您提供定制的设计、开发服务, 同时注重制作移动优先的WEB、H5和小程序。根据您的需要量身定义最合适的系统。</p>
         <div>
-          <a href="/contact" className="btn btn-green text-white mt-4">免费咨询</a>
+          <a href="/contact" class="btn btn-green text-white mt-4">免费咨询</a>
         </div>
       </div>
     </div>
   </div>
 </div>
 <%= render "shared/split", style: "color: white" %>
-<h1>Page#home</h1>
-<p>Find me in app/views/page/home.html.erb</p>
-<a href="/">a link</a>
+<div class="container">
+  <section class="section">
+    <div class="service">
+      <span class="badge badge-green text-white">核心服务</span>
+      <h4 class="mt-3">我们提供的服务</h4>
+      <p class="text-secondary mt-4">我们都是全栈工程师. 如果您选择我们, 我们会以我们最好的激情和技术为您提供如下核心服务</p>
+      <div class="container-fluid mt-5">
+        <div class="service__core row text-center">
+          <div class="col-lg-3 col-md-4 col-12">
+            <i class="ti-comments-smiley text-success"></i>
+            <h4 class="mt-2 text-dark">
+              沟通&方案
+            </h4>
+            <p class="text-secondary">在第一个阶段, 我们会与您沟通和了解您的实际情况. 然后根据实际情况制定出最优的解决方案.</p>
+          </div>
+          <div class="col-lg-3 col-md-4 col-12">
+            <i class="ti-ruler-pencil text-success"></i>
+            <h4 class="mt-2">
+              原型&设计
+            </h4>
+            <p class="text-secondary">在第二个阶段, 我们会给出设计原型图与您确认. 如果方案确定我们将会进入设计阶段, 设计完成我们会与您再次确认.</p>
+          </div>
+          <div class="col-lg-3 col-md-4 col-12">
+            <i class="ti-hummer text-success"></i>
+            <h4 class="mt-2">
+              制作&开发
+            </h4>
+            <p class="text-secondary">在第三个阶段, 我们会根据设计图进行程序的开发. 其中包括(前台、后台、数据库、框架)等一些列的开发, 其中我们会通过实时协作软件与您同步项目进度.</p>
+          </div>
+          <div class="col-lg-3 col-md-4 col-12">
+            <i class="ti-link text-success"></i>
+            <h4 class="mt-2">
+              交付&维护
+            </h4>
+            <p class="text-secondary">在第四个阶段, 我们会为您部署项目与使用教学. 之后如果遇到任何意外问题我们会随时提供技术支持.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="skill container-fluid mt-5">
+        <div class="row align-items-center">
+          <div class="skill__cover col-lg-5 col-md-6">
+            <%= image_tag("service-left", class: "w-100 shadow") %>
+          </div>
+          <div class="col-lg-7 col-md-6 mt-3 mt-md-0 mt-lg-0 mt-xl-0">
+            <h4>技术范围</h4>
+            <p class="text-secondary skill__description">下面允许我们自豪的介绍一下我们所熟悉的技术栈, 专业的技术为您提供专业的服务</p>
+            <div class="accordion" id="skill">
+              <div class="card shadow">
+                <a href="#bootstrap" class="skill__title" data-toggle="collapse">
+                  <div class="card-header">
+                    Bootstrap
+                  </div>
+                </a>
+                <div id="bootstrap" data-parent="#skill" class="collapse show">
+                  <div class="card-body">
+                    Bootstrp是世界上最受欢迎的前端组件库，在网络上构建响应式，移动优先的项目。它也是我们最基础的UI库
+                  </div>
+                </div>
+              </div>
+              <div class="card shadow">
+                <a href="#sass" class="skill__title collapsed" data-toggle="collapse">
+                  <div class="card-header">
+                    React
+                  </div>
+                </a>
+                <div id="sass" data-parent="#skill" class="collapse">
+                  <div class="card-body">
+                    React是用于构建用户界面的JavaScript库，我们使用它来构建最现代化的前端组件。
+                  </div>
+                </div>
+              </div>
+              <div class="card shadow">
+                <a href="#redux" class="skill__title collapsed" data-toggle="collapse">
+                  <div class="card-header">
+                    Redux
+                  </div>
+                </a>
+                <div id="redux" data-parent="#skill" class="collapse">
+                  <div class="card-body">
+                    Redux是JavaScript状态容器，提供可预测化的状态管理。我们使用它来管理应用程序中所有的状态
+                  </div>
+                </div>
+              </div>
+              <div class="card shadow">
+                <a href="#webpack" class="skill__title collapsed" data-toggle="collapse">
+                  <div class="card-header">
+                    Webpack
+                  </div>
+                </a>
+                <div id="webpack" data-parent="#skill" class="collapse">
+                  <div class="card-body">
+                    webpack是一个现代JavaScript应用程序的静态模块打包器(module bundler)，我们使用它来打包应用程序。
+                  </div>
+                </div>
+              </div>
+              <div class="card shadow">
+                <a href="#nodejs" class="skill__title collapsed" data-toggle="collapse">
+                  <div class="card-header">
+                    Node.js
+                  </div>
+                </a>
+                <div id="nodejs" data-parent="#skill" class="collapse">
+                  <div class="card-body">
+                    Node.js是基于Chrome V8 JavaScript引擎构建的JavaScript运行时，我们会使用它来开发后端程序以及一些CLI工具。
+                  </div>
+                </div>
+              </div>
+              <div class="card shadow">
+                <a href="#rails" class="skill__title collapsed" data-toggle="collapse">
+                  <div class="card-header">
+                    Ruby on Rails
+                  </div>
+                </a>
+                <div id="rails" data-parent="#skill" class="collapse">
+                  <div class="card-body">
+                    Rails是一个基于Ruby的Web应用程序框架，使用它可以让我们可以快速搭建出功能完备的MVC程序。
+                  </div>
+                </div>
+              </div>
+              <div class="card shadow">
+                <a href="#database" class="skill__title collapsed" data-toggle="collapse">
+                  <div class="card-header">
+                    Database
+                  </div>
+                </a>
+                <div id="database" data-parent="#skill" class="collapse">
+                  <div class="card-body">
+                    数据库我们在大多数情况下会选择MongoDB、PostgreSQL
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<%= render('shared/footer') %>

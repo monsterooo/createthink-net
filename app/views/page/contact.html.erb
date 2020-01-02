@@ -1,2 +1,58 @@
-<h1>Page#contact</h1>
-<p>Find me in app/views/page/contact.html.erb</p>
+<%= render "shared/header", class: 'header--reversal' %>
+<div class="hero hero__bg2">
+  <div class="container">
+    <div class="row">
+      <div class="hero__heading col-lg-6 col-md-7">
+        <h1>联系我们</h1>
+        <p class="text-secondary mt-4">为您提供免费的咨询服务</p>
+      </div>
+    </div>
+  </div>
+</div>
+<%= render "shared/split", style: "color: white" %>
+<div class="container mb-5">
+  <section class="section">
+    <h4 class="text-center">联系我们</h4>
+    <p class="mt-4 text-center text-secondary">您想要创建自己的网站或小程序吗？欢迎与我们取得联系，会为您提供咨询。</p>
+    <div class="row justify-content-center">
+      <div class="col-md-8 mt-4 pt-2">
+        <%= render 'contacts/form', contact: @contact %>
+<!--        <form method="post" action="php/contact.php" name="contact-form" id="contact-form">-->
+<!--          <div class="row">-->
+<!--            <div class="col-md-6">-->
+<!--              <div class="form-group">-->
+<!--                <label>姓名 :</label>-->
+<!--                <input name="name" id="name" type="text" class="form-control" placeholder="请输入您的姓名" />-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <div class="col-md-6">-->
+<!--              <div class="form-group">-->
+<!--                <label>邮箱 :</label>-->
+<!--                <input name="email" id="email" type="email" class="form-control" placeholder="请输入您的邮箱" />-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <div class="col-md-12">-->
+<!--              <div class="form-group">-->
+<!--                <label>标题 :</label>-->
+<!--                <input name="title" id="title" class="form-control" placeholder="请输入一个标题" />-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <div class="col-md-12">-->
+<!--              <div class="form-group">-->
+<!--                <label>你的需求 :</label>-->
+<!--                <textarea name="content" id="content" rows="4" class="form-control" placeholder="请输入您的需求内容"></textarea>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="row">-->
+<!--            <div class="col-sm-12">-->
+<!--              <a class="submitBnt btn btn-green text-white">发送消息</a>-->
+<!--              <div id="simple-msg"></div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </form>-->
+      </div>
+    </div>
+  </section>
+</div>
+<%= render('shared/footer') %>

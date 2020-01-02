@@ -13,11 +13,17 @@
  *= require_self
  */
 
- @import "variables";
- @import "bootstrap";
+@import "variables";
+@import "bootstrap";
+@import "./themify-icons/themify-icons.css";
+@import './page';
 
+.section {
+  position: relative;
+  padding: 100px 0px;
+}
 
- .header {
+.header {
   position: fixed;
   top: 0;
   left: 0;
@@ -97,5 +103,18 @@
     transform-origin: top center;
     width: 100%;
     height: auto;
+  }
+}
+
+.footer {
+  color: #adb5bd;
+  background: var(--gray);
+
+  a {
+    color: var(--green);
+
+    &:hover {
+      color: var(--green);
+    }
   }
 }

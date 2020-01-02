@@ -11,27 +11,41 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <%= form.label :title, '姓名' %>
+        <%= form.text_field :title, class: "form-control", placeholder: '请输入您的姓名' %>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="form-group">
+        <%= form.label :email, '邮箱' %>
+        <%= form.text_field :email, class: "form-control", placeholder: '请输入您的邮箱' %>
+      </div>
+    </div>
+
+    <div class="col-md-12">
+      <div class="form-group">
+        <%= form.label :title, '标题' %>
+        <%= form.text_field :title, class: "form-control", placeholder: '请输入一个标题' %>
+      </div>
+    </div>
+
+    <div class="col-md-12">
+      <div class="form-group">
+        <%= form.label :content, '标题' %>
+        <%= form.text_area :content, class: "form-control", rows: "4", placeholder: '请输入您的需求内容' %>
+      </div>
+    </div>
+
   </div>
 
-  <div class="field">
-    <%= form.label :content %>
-    <%= form.text_area :content %>
+  <div class="row">
+    <div class="col-sm-12">
+      <%= submit_tag "发送消息", class: "btn btn-success text-white" %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
-  </div>
-
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
 <% end %>

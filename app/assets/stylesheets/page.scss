@@ -1,3 +1,136 @@
-// Place all the styles related to the Page controller here.
+// Place all the styles related to the page controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.service {
+  &__core {
+    i {
+      font-size: 42px;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+}
+.skill {
+  &__cover {
+    img {
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    }
+  }
+  .card {
+    border-radius: 12px !important;
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__title {
+    color: var(--green); // 展开样式
+    position: relative;
+
+    &.collapsed::after {
+      top: 13px;
+      transform: rotate(180deg);
+    }
+    &::after {
+      content: '\e648';
+      font-family: 'themify';
+      transform: rotate(0deg);
+      color: var(--dark);
+      display: block;
+      font-size: 18px;
+      position: absolute;
+      right: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: all 0.5s ease;
+    }
+    &:hover {
+      text-decoration: none;
+      color: var(--green); // 展开样式
+    }
+    &.collapsed { // 折叠样式
+      color: var(--dark);
+    }
+  }
+}
+
+$extensionColor: #f6f7fa;
+.extension__split {
+  color: $extensionColor;
+}
+.extension {
+  background: $extensionColor;
+  &__item {
+    padding: 48px 16px;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
+
+    &:hover {
+      border-radius: 4px;
+      background: var(--white);
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+      transform: translateY(-7px);
+    }
+    h4 {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+    p {
+      font-size: 14px;
+    }
+    i {
+      color: color('main-green');
+      font-size: 42px;
+    }
+  }
+  &__desciption {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  &__contact {
+    margin-top: 60px;
+    margin-bottom: 80px;
+    .btn {
+      letter-spacing: 2px;
+      width: 80%;
+      color: color('main-green');
+      &:hover {
+        color: white;
+      }
+    }
+    h5 {
+      color: color('main-gray');
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+.customer {
+  img {
+    margin: 0 auto;
+    width: 42px !important;
+  }
+  .owl-dot {
+    span {
+      transition: all 0.5s ease !important;
+      background: #b7e3bd !important;
+    }
+    &.active span {
+      background: #6dc77a !important;
+      // height: 7px;
+      width: 13px;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  &__info {
+    p {
+      font-size: 12px;
+    }
+  }
+}
