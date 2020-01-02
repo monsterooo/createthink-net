@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :categories
   get '/contact', to: 'page#contact'
   get 'page/home'
   devise_for :users
