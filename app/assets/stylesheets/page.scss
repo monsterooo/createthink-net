@@ -37,7 +37,6 @@
     &::after {
       content: '\e648';
       font-family: 'themify';
-      transform: rotate(0deg);
       color: var(--dark);
       display: block;
       font-size: 18px;
@@ -58,9 +57,6 @@
 }
 
 $extensionColor: #f6f7fa;
-.extension__split {
-  color: $extensionColor;
-}
 .extension {
   background: $extensionColor;
   &__item {
@@ -81,7 +77,6 @@ $extensionColor: #f6f7fa;
       font-size: 14px;
     }
     i {
-      color: color('main-green');
       font-size: 42px;
     }
   }
@@ -95,13 +90,13 @@ $extensionColor: #f6f7fa;
     .btn {
       letter-spacing: 2px;
       width: 80%;
-      color: color('main-green');
+      color: var(--green);
       &:hover {
         color: white;
       }
     }
     h5 {
-      color: color('main-gray');
+      color: var(--gray);
     }
     p {
       font-size: 14px;
@@ -132,5 +127,68 @@ $extensionColor: #f6f7fa;
     p {
       font-size: 12px;
     }
+  }
+}
+
+.latest-blog {
+  &__item {
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
+
+    &:hover {
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+      transform: translateY(-7px);
+    }
+  }
+  &__title {
+    color: var(--gray);
+    font-size: 16px;
+    transition: color 0.5s;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    word-break: break-all;
+
+    &:hover {
+      color: var(--green) !important;
+    }
+  }
+  &__description {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  &__short {
+    font-size: 14px;
+  }
+  &__img {
+    width: 100%;
+    padding: 35%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+  }
+  &__avatar {
+    img {
+      width: 32px;
+    }
+    span {
+      font-size: 12px;
+    }
+  }
+}
+
+.blog-view {
+  &__img {
+    width: 100%;
+    padding: 35%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+  }
+  &__content {
+    font-size: 14px;
   }
 }

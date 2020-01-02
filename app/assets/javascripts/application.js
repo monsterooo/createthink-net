@@ -15,6 +15,7 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
+//= require owl.carousel.min.js
 //= require_tree .
 
 function windowScroll() {
@@ -26,6 +27,21 @@ function windowScroll() {
 }
 $(document).on('turbolinks:load', () => {
     window.addEventListener('scroll', windowScroll);
+
+    // 初始化首页carousel
+    if ($('.page.home').length > 0) {
+      const customer = $('.customer');
+      if (!customer.attr('init')) {
+        customer.owlCarousel({
+          items: 1,
+          loop: true,
+          nav: false,
+          dots: true,
+        });
+        customer.attr('init', 'true')
+      }
+    }
+    
 });
 $(document).on('turbolinks:before-render', () => {
     console.log('turbolinks:before-render');
