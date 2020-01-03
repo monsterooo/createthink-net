@@ -60,7 +60,7 @@
 .hero {
   position: relative;
   padding: 240px 0;
-  background: image_path('hero1-background.jpg') no-repeat center center;
+  background: url(image_path('hero1-background.jpg')) no-repeat center center;
   background-size: cover;
 
   &--mask::after {
@@ -75,7 +75,7 @@
     clip-path: polygon(0 0, 90% 0, 70% 100%, 0 100%);
   }
   &__bg2 {
-    background-image: image_path('hero2-background.jpg');
+    background-image: url(image_path('hero2-background.jpg'));
   }
 
   &__heading {
