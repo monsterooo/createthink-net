@@ -68,3 +68,7 @@ gem "jquery-rails", "~> 4.3"
 gem "administrate", "~> 0.12.0"
 
 gem "redcarpet", "~> 3.5"
+
+gem "rolify", "~> 5.2"
+
+gem "pundit", "~> 2.1"
