@@ -41,8 +41,18 @@ $(document).on('turbolinks:load', () => {
         customer.attr('init', 'true')
       }
     }
-    
 });
+document.addEventListener('turbolinks:load', () => {
+    $(document).on('submit', '.needValid', e => {
+        const { target } = e;
+        if (target.checkValidity() === false) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+        target.classList.add('was-validated');
+    });
+}, { once: true });
+
 $(document).on('turbolinks:before-render', () => {
     console.log('turbolinks:before-render');
     window.removeEventListener('scroll', windowScroll);

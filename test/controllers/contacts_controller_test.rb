@@ -20,7 +20,8 @@ class ContactsControllerTest < ActionDispatch::IntegrationTest
       post contacts_url, params: { contact: { content: @contact.content, email: @contact.email, name: @contact.name, title: @contact.title } }
     end
 
-    assert_redirected_to contact_url(Contact.last)
+    # assert_redirected_to contact_url(Contact.last)
+    assert_redirected_to controller: "page", action: "contact"
   end
 
   test "should show contact" do

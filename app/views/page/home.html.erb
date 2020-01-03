@@ -1,4 +1,4 @@
-<%= render "shared/header"%>
+<%= render "shared/header" %>
 <div class="hero hero--mask">
   <div class="container">
     <div class="row">
@@ -193,7 +193,7 @@
           <div class="extension__item text-center">
             <i class="ti-infinite text-success"></i>
             <h4>工作流程</h4>
-            <p class="text-secondary">通过在线协作软件与项目管理软件实时沟通项目进度以及项目成果</p>
+            <p class="text-secondary">通过在线协作软件与项目管理软件实时沟通项目进度</p>
           </div>
         </div>
         <div class="col-lg-3 col-md-4 col-12">
@@ -214,7 +214,7 @@
           <div class="extension__item text-center">
             <i class="ti-stats-up text-success"></i>
             <h4>共同成长</h4>
-            <p class="text-secondary">将为您提供永久免费的故障, 包括服务器问题、数据库问题以及部署方面的问题</p>
+            <p class="text-secondary">我们愿意用我们的技术和热情在您公司成长的道路上共同成长</p>
           </div>
         </div>
       </div>
@@ -276,13 +276,13 @@
                 <small class="float-left"><%= article.category.title %></small>
                 <small class="float-right text-muted"><%= article.created_at.strftime('%F') %></small>
               </div>
-              <a href="" class="blog__title d-block mt-2 mb-2"><%= article.title %></a>
+              <%= link_to article.title, article, class: 'blog__title d-block mt-2 mb-2' %>
               <p class="blog__short text-secondary">
                 <%= markdown_to_text(article.content) %>
               </p>
               <div class="blog__avatar border-top mt-3 pt-3 d-flex align-items-center">
                 <%= image_tag("avatar1", class: "shadow rounded-pill mr-2") %>
-                <span><%= article.user.email %></span>
+                <span><%= article.user.username %></span>
               </div>
             </div>
           </div>

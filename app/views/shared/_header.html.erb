@@ -12,13 +12,13 @@
             <a class="nav-link pl-3 pr-3" href="/">主页 <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a href="/blog" class="nav-link pl-3 pr-3">博客</a>
+            <%= link_to '博客', articles_path, class: 'nav-link pl-3 pr-3' %>
           </li>
           <li class="nav-item">
-            <a href="/contact" class="nav-link pl-3 pr-3">联系</a>
+            <%= link_to '联系', '/contact', class: 'nav-link pl-3 pr-3' %>
           </li>
           <li class="nav-item">
-            <a href="https://coderlane.net" target="_blank" class="nav-link pl-3 pr-3">编程工具</a>
+            <%= link_to '编程工具', 'https://coderlane.net', target: "_blank", class: 'nav-link pl-3 pr-3' %>
           </li>
         </ul>
       </div>

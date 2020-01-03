@@ -6,8 +6,3 @@ one:
   email: MyString
   name: MyString
 
-two:
-  title: MyString
-  content: MyText
-  email: MyString
-  name: MyString

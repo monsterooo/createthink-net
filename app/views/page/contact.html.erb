@@ -16,41 +16,8 @@
     <p class="mt-4 text-center text-secondary">您想要创建自己的网站或小程序吗？欢迎与我们取得联系，会为您提供咨询。</p>
     <div class="row justify-content-center">
       <div class="col-md-8 mt-4 pt-2">
+        <%= notice_message %>
         <%= render 'contacts/form', contact: @contact %>
-<!--        <form method="post" action="php/contact.php" name="contact-form" id="contact-form">-->
-<!--          <div class="row">-->
-<!--            <div class="col-md-6">-->
-<!--              <div class="form-group">-->
-<!--                <label>姓名 :</label>-->
-<!--                <input name="name" id="name" type="text" class="form-control" placeholder="请输入您的姓名" />-->
-<!--              </div>-->
-<!--            </div>-->
-<!--            <div class="col-md-6">-->
-<!--              <div class="form-group">-->
-<!--                <label>邮箱 :</label>-->
-<!--                <input name="email" id="email" type="email" class="form-control" placeholder="请输入您的邮箱" />-->
-<!--              </div>-->
-<!--            </div>-->
-<!--            <div class="col-md-12">-->
-<!--              <div class="form-group">-->
-<!--                <label>标题 :</label>-->
-<!--                <input name="title" id="title" class="form-control" placeholder="请输入一个标题" />-->
-<!--              </div>-->
-<!--            </div>-->
-<!--            <div class="col-md-12">-->
-<!--              <div class="form-group">-->
-<!--                <label>你的需求 :</label>-->
-<!--                <textarea name="content" id="content" rows="4" class="form-control" placeholder="请输入您的需求内容"></textarea>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--          <div class="row">-->
-<!--            <div class="col-sm-12">-->
-<!--              <a class="submitBnt btn btn-green text-white">发送消息</a>-->
-<!--              <div id="simple-msg"></div>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </form>-->
       </div>
     </div>
   </section>

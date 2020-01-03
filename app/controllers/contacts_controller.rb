@@ -28,13 +28,22 @@ class ContactsController < ApplicationController
 
     respond_to do |format|
       if @contact.save
-        format.html { redirect_to @contact, notice: 'Contact was successfully created.' }
-        format.json { render :show, status: :created, location: @contact }
+        flash[:notice] = '您的消息已成功发送，我们会尽快与您取得联系。'
+        format.html { redirect_to controller: 'page', action: 'contact' }
       else
-        format.html { render :new }
-        format.json { render json: @contact.errors, status: :unprocessable_entity }
+        flash[:danger] = '发送消息失败，请稍后再试。'
+        format.html { redirect_to controller: 'page', action: 'contact' }
       end
     end
+    #respond_to do |format|
+    #  if @contact.save
+    #    format.html { redirect_to @contact, notice: 'Contact was successfully created.' }
+    #    format.json { render :show, status: :created, location: @contact }
+    #  else
+    #    format.html { render :new }
+    #    format.json { render json: @contact.errors, status: :unprocessable_entity }
+    #  end
+    #end
   end
 
   # PATCH/PUT /contacts/1

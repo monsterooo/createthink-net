@@ -7,9 +7,3 @@ one:
   user: one
   category: one
 
-two:
-  title: MyString
-  content: MyText
-  image: MyString
-  user: two
-  category: two

@@ -1,29 +1,59 @@
-<p id="notice"><%= notice %></p>
+<%= render "shared/header", class: 'header--reversal' %>
 
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
+<!--<div class="hero hero__bg2">-->
+<!--  <div class="container">-->
+<!--    <div class="row">-->
+<!--      <div class="hero__heading col-lg-6 col-md-7">-->
+<!--        <h1>Blog</h1>-->
+<!--        <p class="text-secondary mt-4">我们撰写并展示专业的技术文章, 欢迎阅读和分享</p>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+<%= render "shared/split", style: "color: white" %>
 
-<p>
-  <strong>Content:</strong>
-  <%= @article.content %>
-</p>
+<section class="section blog-view">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <div class="blog__img rounded shadow" style="background-image: url(<%= @article.image %>)"></div>
+      </div>
+      <div class="col-lg-6 mt-4 pt-2">
+        <div class="title-heading">
+          <ul class="list-unstyled">
+            <li class="list-inline-item h6 user text-muted mr-2">
+              <i class="ti-tag"></i> <span class="text-custom"><%= @article.category.title %></span>
+            </li>
+            <li class="list-inline-item h6 date text-muted">
+              <i class="ti-timer"></i> <%= @article.created_at.strftime('%F') %>
+            </li>
+          </ul>
+          <h2>
+            <a class="text-dark"><%= @article.title %></a>
+          </h2>
+          <div class="mt-4">
+            <div class="d-flex blog__avatar">
+              <%= image_tag("avatar1", class: "rounded-pill mr-3 shadow") %>
+              <div class="author mt-2">
+                <h6 class="mb-0">
+                  <span class="text-dark name"><%= @article.user.username %></span>
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-12">
+        <div class="border rounded position-relative overflow-hidden">
+          <div class="blog-view__content p-4 text-muted">
+            <%= raw markdown_to_html(@article.content) %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-<p>
-  <strong>Image:</strong>
-  <%= @article.image %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @article.user %>
-</p>
-
-<p>
-  <strong>Category:</strong>
-  <%= @article.category %>
-</p>
-
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
+<%= render('shared/footer') %>

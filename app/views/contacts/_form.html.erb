@@ -1,4 +1,4 @@
-<%= form_with(model: contact, local: true) do |form| %>
+<%= form_with(model: contact, local: true, class: 'needValid', html: { novalidate: true }) do |form| %>
   <% if contact.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
@@ -14,28 +14,37 @@
   <div class="row">
     <div class="col-md-6">
       <div class="form-group">
-        <%= form.label :title, '姓名' %>
-        <%= form.text_field :title, class: "form-control", placeholder: '请输入您的姓名' %>
+        <%= form.label :name, '姓名' %>
+        <%= form.text_field :name, class: "form-control", placeholder: '请输入您的姓名', required: true %>
+        <div class="invalid-feedback">
+          请输入您的姓名
+        </div>
       </div>
     </div>
 
     <div class="col-md-6">
       <div class="form-group">
         <%= form.label :email, '邮箱' %>
-        <%= form.text_field :email, class: "form-control", placeholder: '请输入您的邮箱' %>
+        <%= form.text_field :email, class: "form-control", placeholder: '请输入您的邮箱地址', required: true, pattern: '[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,63}$' %>
+        <div class="invalid-feedback">
+          请正确输入您的邮箱地址
+        </div>
       </div>
     </div>
 
     <div class="col-md-12">
       <div class="form-group">
         <%= form.label :title, '标题' %>
-        <%= form.text_field :title, class: "form-control", placeholder: '请输入一个标题' %>
+        <%= form.text_field :title, class: "form-control", placeholder: '请输入一个标题', required: true %>
+        <div class="invalid-feedback">
+          请输入一个标题
+        </div>
       </div>
     </div>
 
     <div class="col-md-12">
       <div class="form-group">
-        <%= form.label :content, '标题' %>
+        <%= form.label :content, '消息内容' %>
         <%= form.text_area :content, class: "form-control", rows: "4", placeholder: '请输入您的需求内容' %>
       </div>
     </div>
@@ -44,7 +53,7 @@
 
   <div class="row">
     <div class="col-sm-12">
-      <%= submit_tag "发送消息", class: "btn btn-success text-white" %>
+      <%= submit_tag "发送消息", data: { disable_with: false }, class: "btn btn-success text-white" %>
     </div>
   </div>
 

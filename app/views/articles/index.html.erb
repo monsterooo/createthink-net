@@ -1,4 +1,5 @@
-<%= render "shared/header"%>
+<%= render "shared/header", class: 'header--reversal' %>
+
 <div class="hero hero__bg2">
   <div class="container">
     <div class="row">
@@ -23,13 +24,13 @@
                 <small class="float-left"><%= article.category.title %></small>
                 <small class="float-right text-muted"><%= article.created_at.strftime('%F') %></small>
               </div>
-              <a href="" class="blog__title d-block mt-2 mb-2"><%= article.title %></a>
+              <%= link_to article.title, article, class: 'blog__title d-block mt-2 mb-2' %>
               <p class="blog__short text-secondary">
                 <%= markdown_to_text(article.content) %>
               </p>
               <div class="blog__avatar border-top mt-3 pt-3 d-flex align-items-center">
                 <%= image_tag("avatar1", class: "shadow rounded-pill mr-2") %>
-                <span><%= article.user.email %></span>
+                <span><%= article.user.username %></span>
               </div>
             </div>
           </div>
@@ -38,6 +39,8 @@
     </div>
   </section>
 </div>
+
+<%= render('shared/footer') %>
 
 <p id="notice"><%= notice %></p>
 
