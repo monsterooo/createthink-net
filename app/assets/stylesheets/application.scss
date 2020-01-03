@@ -11,13 +11,13 @@
  * It is generally better to create a new file per style scope.
  *
  *= require_self
+ *= owl-carousel/owl.carousel.min.css
+ *= owl-carousel/owl.theme.default.min.css
+ *= themify-icons/themify-icons.css
  */
 
 @import "variables";
 @import "bootstrap";
-@import "owl-carousel/owl.carousel.min.css";
-@import 'owl-carousel/owl.theme.default.min.css';
-@import "./themify-icons/themify-icons.css";
 @import './page';
 
 .section {
@@ -60,7 +60,7 @@
 .hero {
   position: relative;
   padding: 240px 0;
-  background: url(hero1-background.jpg) no-repeat center center;
+  background: image_path('hero1-background.jpg') no-repeat center center;
   background-size: cover;
 
   &--mask::after {
@@ -75,7 +75,7 @@
     clip-path: polygon(0 0, 90% 0, 70% 100%, 0 100%);
   }
   &__bg2 {
-    background-image: url(hero2-background.jpg);
+    background-image: image_path('hero2-background.jpg');
   }
 
   &__heading {
