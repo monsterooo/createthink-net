@@ -64,3 +64,5 @@ gem "devise", "~> 4.7"
 gem "bootstrap", "~> 4.4"
 
 gem "jquery-rails", "~> 4.3"
+
+gem "administrate", "~> 0.12.0"
