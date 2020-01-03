@@ -11,9 +11,9 @@
  * It is generally better to create a new file per style scope.
  *
  *= require_self
- *= owl-carousel/owl.carousel.min.css
- *= owl-carousel/owl.theme.default.min.css
- *= themify-icons/themify-icons.css
+ *= require owl-carousel/owl.carousel.min.css
+ *= require owl-carousel/owl.theme.default.min.css
+ *= require themify-icons/themify-icons.css
  */
 
 @import "variables";

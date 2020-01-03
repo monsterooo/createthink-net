@@ -54,6 +54,5 @@ document.addEventListener('turbolinks:load', () => {
 }, { once: true });
 
 $(document).on('turbolinks:before-render', () => {
-    console.log('turbolinks:before-render');
     window.removeEventListener('scroll', windowScroll);
 });
