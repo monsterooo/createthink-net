@@ -374,7 +374,7 @@
 		if(!el) {
 			break;
 		}
-		c = el.className;
+		c = el.class;
 		c = c.match(/ti-[^\s'"]+/);
 		if (c && icons[c[0]]) {
 			addIcon(el, icons[c[0]]);

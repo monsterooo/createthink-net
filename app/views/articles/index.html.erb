@@ -1,3 +1,44 @@
+<%= render "shared/header"%>
+<div class="hero hero__bg2">
+  <div class="container">
+    <div class="row">
+      <div class="hero__heading col-lg-6 col-md-7">
+        <h1>Blog</h1>
+        <p class="text-secondary mt-4">我们撰写并展示专业的技术文章, 欢迎阅读和分享</p>
+      </div>
+    </div>
+  </div>
+</div>
+<%= render "shared/split", style: "color: white" %>
+
+<div class="container blog">
+  <section class="section">
+    <div class="row">
+      <% @articles.each do |article| %>
+        <div class="col-4 bg-white">
+          <div class="blog__item rounded border">
+            <div class="blog__img" style="background-image: url(<%= article.image %>)"></div>
+            <div class="p-3">
+              <div class="clearfix">
+                <small class="float-left"><%= article.category.title %></small>
+                <small class="float-right text-muted"><%= article.created_at.strftime('%F') %></small>
+              </div>
+              <a href="" class="blog__title d-block mt-2 mb-2"><%= article.title %></a>
+              <p class="blog__short text-secondary">
+                <%= markdown_to_text(article.content) %>
+              </p>
+              <div class="blog__avatar border-top mt-3 pt-3 d-flex align-items-center">
+                <%= image_tag("avatar1", class: "shadow rounded-pill mr-2") %>
+                <span><%= article.user.email %></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </section>
+</div>
+
 <p id="notice"><%= notice %></p>
 
 <h1>Articles</h1>

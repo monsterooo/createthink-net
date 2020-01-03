@@ -130,7 +130,7 @@ $extensionColor: #f6f7fa;
   }
 }
 
-.latest-blog {
+.blog {
   &__item {
     transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
 
@@ -175,20 +175,5 @@ $extensionColor: #f6f7fa;
     span {
       font-size: 12px;
     }
-  }
-}
-
-.blog-view {
-  &__img {
-    width: 100%;
-    padding: 35%;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-top-left-radius: 0.25rem;
-    border-top-right-radius: 0.25rem;
-  }
-  &__content {
-    font-size: 14px;
   }
 }
