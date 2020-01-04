@@ -13,5 +13,18 @@
   <body class="<%= controller_name %> <%= action_name %>">
     <%= yield :extension_html %>
     <%= yield %>
+
+    <% if Rails.env == 'production' %>
+      <script>
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?59d27a24dd4339d89effc5b6ee29c10f";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+        })();
+      </script>
+    <% end %>
+
   </body>
 </html>
