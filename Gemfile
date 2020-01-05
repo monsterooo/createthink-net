@@ -72,3 +72,5 @@ gem "redcarpet", "~> 3.5"
 gem "rolify", "~> 5.2"
 
 gem "pundit", "~> 2.1"
+
+gem "rouge", "~> 3.14"

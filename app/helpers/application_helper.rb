@@ -1,4 +1,10 @@
 require 'redcarpet/render_strip'
+require 'rouge'
+require 'rouge/plugins/redcarpet'
+
+class CustomRender < Redcarpet::Render::HTML
+  include Rouge::Plugins::Redcarpet
+end
 
 module ApplicationHelper
   # markdown转text并截取开头字符
@@ -6,7 +12,7 @@ module ApplicationHelper
     Redcarpet::Markdown.new(Redcarpet::Render::StripDown).render(markdown)[0...120]
   end
   def markdown_to_html(markdown)
-    Redcarpet::Markdown.new(Redcarpet::Render::HTML, extensions = {}).render(markdown)
+    Redcarpet::Markdown.new(CustomRender, fenced_code_blocks: true).render(markdown)
   end
   def notice_message
     flash_messages = []
