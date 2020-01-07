@@ -28,6 +28,7 @@ class ContactsController < ApplicationController
 
     respond_to do |format|
       if @contact.save
+        ContactMailer.contact_mail(@contact).deliver_now
         flash[:notice] = '您的消息已成功发送，我们会尽快与您取得联系。'
         format.html { redirect_to controller: 'page', action: 'contact' }
       else

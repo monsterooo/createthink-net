@@ -1,11 +1,11 @@
 // Color system
-$main-color: #35404e; // 网页文本主要的颜色
-$green: #6dc77a; // a 标签颜色
-$gray-900: $main-color; // body 背景颜色
-$gray-600: $main-color; // 提供给:root的主要颜色
+$main-color: #35404e;     // 网页文本主要的颜色
+$green: #6dc77a;          // a 标签颜色
+$gray-900: $main-color;   // body 背景颜色
+$gray-600: $main-color;   // 提供给:root的主要颜色
 $dark: $main-color;
 $link-color: $green;
-$box-shadow: 0 0 5px rgba(0, 0, 0, 0.15); // 覆盖bs的默认阴影
+$box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);   // 覆盖bs的默认阴影
 $border-color: #e9ecef;
 
 a {
