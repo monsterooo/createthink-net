@@ -39,10 +39,10 @@ Rails.application.configure do
   config.action_mailer.perform_deliveries = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-      address: "127.0.0.1",
-      port: "1025",
-      enable_starttls_auto: true,
-      domain: "localhost",
+    address: "127.0.0.1",
+    port: "1025",
+    enable_starttls_auto: true,
+    domain: "localhost",
   }
 
   # Print deprecation notices to the Rails logger.

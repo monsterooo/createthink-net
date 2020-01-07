@@ -1,5 +1,5 @@
 class ContactMailer < ApplicationMailer
-  default from: "admin@coderlane.net"
+  default from: ENV['EMAIL']
 
   def contact_mail(contact)
     @contact = contact
