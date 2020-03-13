@@ -65,7 +65,7 @@ gem "bootstrap", "~> 4.4"
 
 gem "jquery-rails", "~> 4.3"
 
-gem "administrate", "~> 0.12.0"
+gem "administrate", "~> 0.13.0"
 
 gem "redcarpet", "~> 3.5"
 
